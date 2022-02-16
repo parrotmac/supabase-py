@@ -66,8 +66,7 @@ def query():
     }
     """
     
-    data = SupabaseDB.supabase.table('credit_data').select('*').limit(1).execute()
-    return data
+    return SupabaseDB.supabase.table('credit_data').select('*').limit(1).execute()
 
 
 @app.get("/cachedResults")
